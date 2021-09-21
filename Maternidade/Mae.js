@@ -46,6 +46,19 @@ class Mae {
     get data_de_nasciemnto (){
         return this.#data_de_nasciemtno;
     }
+    get lista (){
+        return {
+            nome: this.nome,
+            data_de_nascimento: this.data_de_nasciemnto,
+            telefone :this.telefone,
+            endereco: {
+                numero: this.numero,
+                rua: this.rua,
+                bairro: this.bairro
+            },
+            maternidade: this.maternidade
+        }
+    }
 
     set id (nid){
         this.#id = String(nid);
@@ -65,12 +78,8 @@ class Mae {
     set telefone (ntelefone){
         this.#telefone = ntelefone;
     }
-    set maternidade (nmaternidade){
-        this.#maternidade = nmaternidade;
-    }
     set data_de_nasciemnto (ndata_de_nascimento){
         this.#data_de_nasciemtno = ndata_de_nascimento;
     }
 
-}
-export {Mae}
+}module.exports = Mae

@@ -40,6 +40,16 @@ class Maternidade {
     get municipio (){
         return this.#municipio;
     }
+    get lista (){
+        return {
+            nome: this.nome,
+            numero: this.numero,
+            rua: this.rua,
+            municipio: this.municipio,
+            bairro: this.bairro,
+            estado: this.estado
+        }
+    }
 
     set id (nid){
         this.#id = String(nid);
@@ -62,4 +72,4 @@ class Maternidade {
     set municipio (nmunicipio){
         this.#municipio = nmunicipio;
     }
-}
+}module.exports = Maternidade

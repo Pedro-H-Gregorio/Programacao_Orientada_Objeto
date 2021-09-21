@@ -1,15 +1,12 @@
 class Medico {
-
     #CRM;
     #nome;
     #telefone; 
     #especialidade;
-    #bebe
 
-    constructor(CRM, nome, bebe, telefone, especialidade){
+    constructor(CRM, nome, telefone, especialidade){
         this.#CRM = CRM;
         this.#nome = nome;
-        this.#bebe = bebe;
         this.#telefone = telefone;
         this.#especialidade = especialidade;
     } 
@@ -20,14 +17,18 @@ class Medico {
     get nome (){
         return this.#nome;
     }
-    get bebe (){
-        return this.#bebe;
-    }
     get telefone (){
         return this.#telefone;
     }
     get especialidade (){
         return this.#especialidade;
+    }
+    get lista (){
+        return {
+            nome: this.nome,
+            telefone: this.telefone,
+            especialidade: this.especialidade
+        }
     }
 
     set CRM (nCRM){
@@ -36,13 +37,10 @@ class Medico {
     set nome (n){
         this.#nome = n
     }
-    set bebe (nbebe){
-        this.#bebe = nbebe
-    }
     set telefone (ntelefone){
         this.#telefone = ntelefone
     }
     set especialidade (nespecialidade){
         this.#especialidade = nespecialidade
     }
-}
+}module.exports = Medico

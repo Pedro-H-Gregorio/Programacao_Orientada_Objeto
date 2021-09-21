@@ -1,3 +1,10 @@
-import { Mae } from "./Mae.js";
-let mae = new Mae("001", "Sein", "Mirelle", "bairro", "001", "999999", "Mirll", "18/03/2005" )
-console.log(mae.nome)
+const Mae = require("./Mae")
+const Maternidade = require("./Maternidade")
+const Medico = require("./Medico")
+const Bebe = require("./Bebe")
+
+let maternidade = new Maternidade("001", "Mirelle", "Sein", "bairro", "001", "999999", "Mirll")
+let medico = new Medico("001","Pedro","99999999", "cirurgião" )
+let mae = new Mae("001", "Sein", "Mirelle", "bairro", "001", "999999", maternidade.lista, "18/03/2005" )
+let bebe = new Bebe("001","Jv", "3kg", "50cm", "21/09/2021",mae.lista,medico.lista)
+console.log(bebe.medico)
