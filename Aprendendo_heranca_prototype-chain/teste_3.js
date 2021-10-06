@@ -1,6 +1,5 @@
-function Pessoa(){
-    this.nome = "Pedro",
-    this.sobrenome = "Gregorio"
+function Pessoa() {
+  (this.nome = "Pedro"), (this.sobrenome = "Gregorio");
 }
 
 // usar o prototype

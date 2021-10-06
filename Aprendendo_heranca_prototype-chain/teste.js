@@ -1,13 +1,12 @@
-function Pessoa(){
-    this.nome = "Pedro",
-    this.sobrenome = "gregorio"
+function Pessoa() {
+  (this.nome = "Pedro"), (this.sobrenome = "gregorio");
 }
 
-function Aluno (){ 
-    this.matricula = "01"
+function Aluno() {
+  this.matricula = "01";
 }
-Aluno.prototype = Pessoa.__proto__
+Aluno.prototype = Pessoa.__proto__;
 
-let a = new Aluno()
+let a = new Aluno();
 
-console.log(a.nome)
+console.log(a.nome);
