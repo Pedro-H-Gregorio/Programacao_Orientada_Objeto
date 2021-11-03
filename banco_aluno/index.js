@@ -1,18 +1,12 @@
-const { Sequelize } = require("sequelize");
-require("dotenv").config();
+const {
+  createTableEstagio,
+  readEstagio,
+  addEstagio,
+  deleteEstagio,
+} = require("./Controller/EstagioController");
+const estagios = require("./json/Estagios.json");
 
-const mySecret = process.env.DB_URL;
-
-const db = new Sequelize(mySecret, {
-  dialect: "postgres",
-  dialectOptions: {
-    ssl: {
-      rejectUnauthorized: false,
-    },
-  },
-  define: {
-    freezeTableName: true,
-  },
-});
-
-module.exports = db;
+/* createTableEstagio(); */
+/* deleteEstagio(); */
+/* readEstagio(); */
+/* addEstagio(estagios); */
