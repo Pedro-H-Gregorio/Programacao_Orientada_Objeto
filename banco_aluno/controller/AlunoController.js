@@ -1,6 +1,6 @@
 const Aluno = require("../Entidades/Aluno");
 
-class AlunoController extends Aluno {
+class AlunoController {
   static async createTableAluno() {
     await Aluno.sync({ alter: true });
   }
@@ -11,11 +11,16 @@ class AlunoController extends Aluno {
   }
 
   static async addAluno(n) {
-    n.forEach(async (aluno) => await Alunocreate(aluno));
+    n.forEach(async (aluno) => await Aluno.create(aluno));
   }
 
   static async deleteAluno() {
     await Aluno.drop();
+  }
+
+  static async updated(obj) {
+    const aluno = await Aluno.findByPk(obj.id);
+    aluno.update(obj);
   }
 }
 module.exports = AlunoController;

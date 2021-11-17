@@ -1,17 +1,21 @@
 const { Sequelize } = require("sequelize");
 const db = require("./db");
 
-const Professor = db.define("professor", {
-  matricula: {
-    type: Sequelize.INTEGER,
-    primaryKey: true,
-    autoIncrement: true,
+const Professor = db.define(
+  "professor",
+  {
+    matricula: {
+      type: Sequelize.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    nome: {
+      type: Sequelize.STRING,
+      allowNull: false,
+    },
+    idade: Sequelize.INTEGER,
   },
-  nome: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
-  idade: Sequelize.INTEGER,
-});
+  { timestamps: false }
+);
 
 module.exports = Professor;

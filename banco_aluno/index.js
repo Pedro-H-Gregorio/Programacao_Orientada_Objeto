@@ -1,7 +1,9 @@
+const Controller = require("./controller/controller");
 const AlunoController = require("./controller/AlunoController");
 const EstagioCotroller = require("./Controller/EstagioController");
 const ProfessorController = require("./controller/ProfessorController");
 const TurmaController = require("./controller/TurmaController");
+const Aluno = require("./Entidades/Aluno");
 
 const estagios = require("./json/Estagios.json");
 
@@ -29,3 +31,10 @@ ProfessorController.createTableProfessor(); */
 TurmaController.readTurma();
 TurmaController.deleteTurma();
 TurmaController.createTableTurma(); */
+
+// Abistração maior do Controller, exemplos
+/* Controller.createTable(Aluno);
+Controller.delete(Aluno);
+Controller.read(Aluno);
+Controller.add(Aluno, obj);
+Controller.updated(Aluno, obj); */
