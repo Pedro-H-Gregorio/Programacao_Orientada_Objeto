@@ -25,7 +25,7 @@ ProfessorController.deleteProfessor();
 ProfessorController.createTableProfessor(); */
 
 // Comandos do controller do Aluno
-TurmaController.addTurma();
+/* TurmaController.addTurma();
 TurmaController.readTurma();
 TurmaController.deleteTurma();
-TurmaController.createTableTurma();
+TurmaController.createTableTurma(); */
